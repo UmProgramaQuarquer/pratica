@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equação de segundo grau</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        h1 {
+            font: normal 20pt calibri;
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bháskara</h1>
+    <input type="number" name="coef1" id="coef1">
+    <input type="number" name="coef2" id="coef2">
+    <input type="number" name="coef3" id="coef3">
+    <input type="button" value="Solucionar" onclick="equacionar()">
+    <div id="res">Aqui aparecerá o delta e o resultado da equação, se possível.</div>
+    <script>
+        function equacionar() {
+            var n1 = window.document.querySelector('input#coef1')
+            var n2 = window.document.querySelector('input#coef2')
+            var n3 = window.document.querySelector('input#coef3')
+            var res = window.document.querySelector('div#res')
+            var coef1 = Number(n1.value)
+            var coef2 = Number(n2.value)
+            var coef3 = Number(n3.value)
+            var delta = (coef2 ** 2) - (4 * coef1 * coef3)
+            delta_sqrt = Math.sqrt(delta)
+            if (delta > 0) {
+                var x1 = (-coef2 + delta_sqrt) / 2 * coef1
+                var x2 = (-coef2 - delta_sqrt) / 2 * coef1
+                var discriminante = `O delta dessa equação é positivo (${delta}), tornando ela possível com dois resultados.<br/>Seus valores são X1= ${x1} e X2= ${x2}.`
+            } else if (delta == 0) {
+                var x = -coef2 / 2 * coef1
+                var discriminante = `O delta dessa equação é nulo, fazendo com que ela tenha apenas um resultado, ou que as duas raízes tenham o mesmo resultado.<br/>Seu valor é X= ${x}.`
+            } else if (delta < 0) {
+                var discriminante = `O delta dessa equação é negativo, tornando a equação impossível.`
+            }
+            res.innerHTML = discriminante
+        }
+    </script>
+</body>
+</html>

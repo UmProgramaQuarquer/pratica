@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(75, 194, 253);
+    font: normal 13pt calibri;
+}
+
+header {
+    text-align: center;
+}
+
+section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+}
+
+div#d6_div {
+    text-align: center;
+}
+
+img#d6_img {
+    border-radius: 100%;
+}
+
+div#res {
+    text-align: center;
+}
+
+img#lado {
+    border-radius: 15%;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+}
