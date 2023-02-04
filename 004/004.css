@@ -1,7 +1,9 @@
 @charset "UTF-8";
 
-body, html {
+body {
     background-color: purple;
+    background-repeat: no-repeat;
+
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
 }
@@ -16,7 +18,7 @@ section {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 50%);
+    transform: translate(-50%, 25%);
 }
 
 section > p {
@@ -36,10 +38,10 @@ section > div#botao {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    transition: .3s;
 }
 
 section > div:hover {
     box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.5);
-    transform: translate(-47%, -53%);
+    transform: translate(-47%, -53%);    
+    transition:  .3s;
 }
