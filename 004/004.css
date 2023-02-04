@@ -28,11 +28,11 @@ section > p {
 
 section > div#botao {
     text-align: center;
-    background-color: cyan;
+    background-color: purple;
     height: 50px;
     width: 50px;
     padding: 10px;
-    border: 1px solid rgb(0, 200, 200);
+    border: 1px solid rgb(100, 1, 100);
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -40,7 +40,9 @@ section > div#botao {
     transform: translate(-50%, -50%);
 }
 
-section > div:hover {
+section > div#botao:hover {
+    background-color: cyan;
+    border: 1px solid rgb(0, 200, 200);
     box-shadow: -2px 2px 3px rgba(0, 0, 0, 0.5);
     transform: translate(-47%, -53%);    
     transition:  .3s;
