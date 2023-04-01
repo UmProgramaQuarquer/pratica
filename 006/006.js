@@ -10,4 +10,6 @@ function parImpar(n) {
     return valor
 }
 
-console.log(`O númweo ${num} é ${parImpar(num)}.`)
+var arr = [0, 1, 2]
+
+console.log(`O número ${arr.length}.`)
